@@ -1,0 +1,4 @@
+on post-fs-data
+    write /sys/block/zram0/disksize 8589934592
+    mkswap /dev/block/zram0
+    swapon /dev/block/zram0
