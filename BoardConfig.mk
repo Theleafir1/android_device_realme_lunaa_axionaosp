@@ -28,3 +28,7 @@ TARGET_RECOVERY_UI_MARGIN_HEIGHT := 103
 
 # Include the proprietary files BoardConfig.
 include vendor/realme/lunaa/BoardConfigVendor.mk
+
+TARGET_2ND_ARCH_VARIANT := armv8-2a
+BOARD_HAS_NFC := true
+

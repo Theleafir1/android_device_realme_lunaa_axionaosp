@@ -1,0 +1,10 @@
+# Доступ HAL к самому устройству NFC
+allow hal_nfc_default nfc_device:chr_file rw_file_perms;
+
+# Разрешаем доступ к данным/файлам HAL
+allow hal_nfc_default nfc_vendor_data_file:dir create_dir_perms;
+allow hal_nfc_default nfc_vendor_data_file:file create_file_perms;
+
+# Разрешаем binder-взаимодействие с системными компонентами
+allow hal_nfc_default system_app:binder call;
+allow hal_nfc_default hal_nfc_hwservice:hwservice_manager find;
